@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','app_odoo_customize','project_task_timer','foss_project_tags','bi_odoo_project_phases'],
+    'depends': ['base','app_odoo_customize','project_task_timer','bi_odoo_project_phases','sale_management'],
 
     # always loaded
     'data': [
