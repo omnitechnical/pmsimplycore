@@ -3,8 +3,7 @@
     'name': "pmsimply",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        PMSIMPLY""",
 
     'description': """
         Long description of module's purpose
@@ -20,13 +19,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','app_odoo_customize','project_task_timer','bi_odoo_project_phases','sale_management'],
+    'depends': ['base','app_odoo_customize','mail_bot','project_task_timer','bi_odoo_project_phases','sale_management','auto_backup','sinerkia_jitsi_meet'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'data/res_partner_data.xml',
+        'views/assets.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
