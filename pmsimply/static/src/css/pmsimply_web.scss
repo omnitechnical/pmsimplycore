@@ -1,0 +1,112 @@
+$o-brand-pmsimply: #1B567A !important;
+$o-brand-pmsimply-navbar-inverse-link-hover-bg: darken(#1B567A, 10%) !default;
+$o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%);
+
+/* START NAVBAR */
+.o_main_navbar {
+    border-bottom: 1px solid $o-brand-pmsimply;
+    background-color: $o-brand-pmsimply;
+
+    > a, > button {
+        &:hover, &:focus {
+            background-color: $o-brand-pmsimply-navbar-inverse-link-hover-bg;
+        }
+    }
+
+    > ul {
+        > li {
+            > a, > label {
+                &:hover {
+                    background-color: $o-brand-pmsimply-navbar-inverse-link-hover-bg;
+                }
+            }
+            &.o_extra_menu_items {
+                > a {}
+                &.show > ul {
+                    > li {
+                        > a {
+                            background-color: $o-brand-pmsimply;
+
+                            &.dropdown-toggle {
+                                background-color: $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+    .show .dropdown-toggle {
+        background-color: $o-brand-pmsimply-navbar-inverse-link-hover-bg;
+    }
+}
+/* END NAVBAR */
+
+/* START FIELDS */
+/* REQUIRED */
+.o_required_modifier {
+    &.o_input, .o_input {
+        background-color: #CAE8FA !important;
+    }
+}
+/* END FIELDS */
+
+/* START DOMAIN SELECTOR */
+.o_domain_node {
+	/* Animation effects*/
+    &::after {
+        background-image: linear-gradient(45deg, rgba(#1B567A, 0.4), rgba(#1B567A, 0.1));
+    }
+}
+/* END DOMAIN SELECTOR */
+
+/* START DOMAIN SELECTOR */
+.ui-autocomplete .ui-menu-item {
+    > a.ui-state-active {
+        background-color: $o-brand-pmsimply;
+        color: white;
+    }
+    &.o_m2o_dropdown_option > a {
+        color: $o-brand-pmsimply;
+        &.ui-state-active {
+            color: white;
+        }
+    }
+}
+/* END DOMAIN SELECTOR */
+
+/* START BUTTONS */
+
+.oe_button_box {
+
+    .btn.oe_stat_button {
+        > .o_stat_info, > span { 
+            .o_stat_value {
+                color: $o-brand-pmsimply;
+            }
+        }
+    }
+}
+
+/* END BUTTONS */
+
+/* START SEARCH VIEW */
+.o_searchview {
+    .o_searchview_facet {
+        .o_searchview_facet_label {
+            background-color: $o-brand-pmsimply;
+        }
+    }
+    .o_searchview_autocomplete li.o-selection-focus {
+        background-color: $o-brand-pmsimply;
+    }
+}
+/* END SEARCH VIEW */
+
+/* START LOADING */
+.o_loading {
+    background-color: $o-brand-pmsimply;
+}
+/* START SLOADING */
