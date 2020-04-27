@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<record id="subscription_user_limit" model="ir.config_parameter">
-		   <field name="key">subscription_user_limit</field>
+		<record id="sub_usr_cnt" model="ir.config_parameter">
+		   <field name="key">sub_usr_cnt</field>
 		   <field name="value">5</field>
 		</record>
+		<record id="app_subscription_url" model="ir.config_parameter">
+            <field name="key">app_subscription_url</field>
+            <field name="value">https://pmsimply.odoo.com/my/subscription</field>
+        </record>
+        <record id="app_subscription_add_user_url" model="ir.config_parameter">
+            <field name="key">app_subscription_add_user_url</field>
+            <field name="value">https://pmsimply.odoo.com/shop</field>
+        </record>
 	</data>
 </odoo>

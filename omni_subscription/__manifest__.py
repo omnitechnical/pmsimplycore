@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'app_odoo_customize'],
 
     # always loaded
     'data': [
@@ -27,6 +27,11 @@
         'security/subscription_settings.xml',
         'data/config_parameter_data.xml',
         'data/menu_data.xml',
+        'views/assets.xml',
+        'views/res_config_settings_views.xml',
+    ],
+    'qweb': [
+        "static/src/xml/base.xml",
     ],
     'installable': True,
     'application': False,

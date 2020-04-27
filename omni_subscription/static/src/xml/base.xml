@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+	<t t-extend="UserMenu.Actions">
+		<t t-jquery="a[data-menu='settings']" t-operation="before">
+			<a role="menuitem" href="#" data-menu="subscription" class="dropdown-item">Manage Subscriptions</a>
+			<a role="menuitem" href="#" data-menu="subscriptionadduser" class="dropdown-item">Add Users</a>
+			<div role="separator" class="dropdown-divider"/>
+		</t>
+		<t t-jquery="a[data-menu='account']" t-operation="replace">
+		</t>
+	</t>
+</templates>

@@ -11,10 +11,10 @@ class ResUsers(models.Model):
 	
 	@api.model
 	def create(self, values):
-		subscription_user_limit = self.env['ir.config_parameter'].get_param('subscription_user_limit')
+		sub_usr_cnt = self.env['ir.config_parameter'].get_param('sub_usr_cnt')
 		user_ids = self.env['res.users'].search([])
 		user_count = len(user_ids)
-		if user_count >= int(subscription_user_limit):
+		if user_count >= int(sub_usr_cnt):
 			raise UserError(_("Maximum user limit reached! You cannot create this user. Please contact customer support to upgrade your subscription."))
 		result = super(ResUsers, self).create(values)
 		return result 
