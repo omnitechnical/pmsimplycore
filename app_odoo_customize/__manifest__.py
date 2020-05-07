@@ -136,9 +136,9 @@
         'data/res_groups.xml',
         'security/ir.model.access.csv',
     ],
-    'qweb': [
-        'static/src/xml/*.xml',
-    ],
+    # 'qweb': [
+    #     'static/src/xml/*.xml',
+    # ],
     'demo': [],
     'test': [],
     'css': [],

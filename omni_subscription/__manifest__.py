@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "pmsimply",
+    'name': "omni_subscription",
 
     'summary': """
-        PMSIMPLY""",
+        App Subscription""",
 
     'description': """
         Long description of module's purpose
@@ -19,23 +19,21 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','auth_signup','digest','app_odoo_customize','omni_subscription','project','mail_bot','project_task_timer','bi_odoo_project_phases','sale_management','auto_backup','sinerkia_jitsi_meet'],
+    'depends': ['base', 'app_odoo_customize'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'data/res_partner_data.xml',
-        'data/auth_signup_data.xml',
-        'data/digest_template_data.xml',
-        'data/portal_data.xml',
+        'security/subscription_settings.xml',
+        'data/config_parameter_data.xml',
+        'data/menu_data.xml',
         'views/assets.xml',
-        'views/project_views.xml',
+        'views/res_config_settings_views.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+    'qweb': [
+        "static/src/xml/base.xml",
     ],
     'installable': True,
-    'application': True,
+    'application': False,
     'auto_install': True,
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_app_theme_config_settings_extend" model="ir.ui.view">
+			<field name="name">view.app.theme.config.settings.extend</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id" ref="app_odoo_customize.view_app_theme_config_settings"/>
+			<field name="arch" type="xml">
+				<xpath expr="//label[@for='app_account_title']" position="before">
+                    <label for="app_subscription_url"/>
+                    <div>
+                        <field name="app_subscription_url"/>
+                    </div>
+                    <label for="app_subscription_add_user_url"/>
+                    <div>
+                        <field name="app_subscription_add_user_url"/>
+                    </div>
+                </xpath>
+			</field>
+		</record>
+	</data>
+</odoo>
