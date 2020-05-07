@@ -19,7 +19,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','auth_signup','digest','app_odoo_customize','omni_subscription','project','mail_bot','project_task_timer','bi_odoo_project_phases','sale_management','auto_backup','sinerkia_jitsi_meet'],
+    'depends': ['base',
+                'auth_signup',
+                'digest',
+                'app_odoo_customize',
+                'omni_subscription',
+                'project',
+                'mail_bot',
+                'project_task_timer',
+                'bi_odoo_project_phases',
+                'sale_management',
+                'auto_backup',
+                'sinerkia_jitsi_meet',
+                'web_tour'],
 
     # always loaded
     'data': [
