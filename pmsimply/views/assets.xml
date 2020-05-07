@@ -6,6 +6,7 @@
       	<link rel="stylesheet" href="/pmsimply/static/src/css/pmsimply_web.scss"/>
         <script type="text/javascript" src="/pmsimply/static/src/js/mailbot_service.js"/>
         <script type="text/javascript" src="/pmsimply/static/src/js/systray_messagin_menu.js"/>
+        <script type="text/javascript" src="/pmsimply/static/src/js/tour/pmsimply.js"/>
       </xpath>
     </template>
 
