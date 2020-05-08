@@ -37,7 +37,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'security/res_groups.xml',
-        'security/res_user.xml',
+        #'security/res_user.xml',
         'data/res_partner_data.xml',
         'data/auth_signup_data.xml',
         'data/digest_template_data.xml',
