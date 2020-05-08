@@ -8,7 +8,7 @@ from odoo.http import request
 class Http(models.AbstractModel):
     _inherit = 'ir.http'
 
-    def session_info(self):
-        result = super(Http, self).session_info()
-        result['is_admin'] = True
-        return result
+#    def session_info(self):
+#        result = super(Http, self).session_info()
+#        result['is_admin'] = True
+#        return result

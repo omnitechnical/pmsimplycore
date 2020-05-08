@@ -15,3 +15,10 @@ class ResUsers(models.Model):
 			('idle', 'Idle'),
 			('disabled', 'Disabled'),
 		], string="PMSimplyBot Status")  # keep track of the state: correspond to the code of the last message sent
+
+	def _is_admin(self):
+		self.ensure_one()
+		res = super(ResUsers, self)._is_admin()
+		if self.env.user.has_group('pmsimply.group_allow_user_tours'):
+			return True
+		return res
