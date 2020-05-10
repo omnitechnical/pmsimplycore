@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="base.default_user" model="res.users">
+            <field name="groups_id" eval="[(4,ref('pmsimply.group_allow_user_tours'))]"/>
+        </record>
+    </data>
+</odoo>
