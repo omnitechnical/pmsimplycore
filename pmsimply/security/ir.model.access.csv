@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_pmsimply_pmsimply,pmsimply.pmsimply,model_pmsimply_pmsimply,base.group_user,1,1,1,1
+access_pmsimply_allow_web_tour,pmsimply.allow.web.tour,web_tour.model_web_tour_tour,pmsimply.group_allow_user_tours,1,0,1,0

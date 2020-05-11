@@ -2,6 +2,12 @@ $o-brand-pmsimply: #1B567A;
 $o-brand-pmsimply-navbar-inverse-link-hover-bg: darken(#1B567A, 10%) !default;
 $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%);
 
+// START LABEL ROOT
+//a {
+//    color: $o-brand-pmsimply !important;
+//}
+// END LABEL ROOT
+
 // START NAVBAR
 .o_main_navbar {
     border-bottom: 1px solid $o-brand-pmsimply;
@@ -77,6 +83,13 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 // END DOMAIN SELECTOR
 
 // START LABELS
+.breadcrumb {
+    .breadcrumb-item {
+        > a {
+            color: $o-brand-pmsimply !important;
+        }
+    }
+}
 .o_form_view {
     .o_form_uri {
         color: #1B567A;
@@ -96,13 +109,14 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 // START BUTTONS
 .btn-primary {
 
-    background-color: $o-brand-pmsimply;
-    border-color: #1B567A;
+    background-color: $o-brand-pmsimply !important;
+    border-color: #1B567A !important;
 
     &:hover {
-        background-color: darken(#1B567A, 15%);
-        border-color: #1B567A;
+        background-color: darken(#1B567A, 15%) !important;
+        border-color: #1B567A !important;
     }
+    
 }
 
 .o_form_statusbar {
@@ -111,13 +125,18 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
            
             &:not(.disabled) {
                 &:hover, &:active, &:focus {
-                    color: $o-brand-pmsimply;
+                    color: $o-brand-pmsimply !important;
+                    background-color: gray('200') !important;
+
+                    &:after {
+                        border-left-color: gray('200') !important;
+                    }
                 }
             }
 
             &.btn-primary.disabled {
                 background-color: gray('200') !important;
-                color: $o-brand-pmsimply;
+                color: $o-brand-pmsimply !important;
             }
         }
     }
@@ -137,7 +156,7 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 
 // END BUTTONS
 
-// START SEARCH VIEW
+// START SEARCH VIEW AND SEARCH PANEL
 .o_searchview {
     .o_searchview_facet {
         .o_searchview_facet_label {
@@ -148,7 +167,15 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
         background-color: $o-brand-pmsimply;
     }
 }
-// END SEARCH VIEW
+
+.o_controller_with_searchpanel {
+    .o_search_panel {
+        .o_search_panel_category .o_search_panel_section_icon {
+            color: $o-brand-pmsimply;
+        }
+    }
+}
+// END SEARCH VIEW AND SEARCH PANEL
 
 // START LOADING
 .o_loading {
