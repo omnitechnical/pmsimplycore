@@ -154,4 +154,64 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 .o_loading {
     background-color: $o-brand-pmsimply;
 }
-// START SLOADING
+// END LOADING
+
+// START CHAT HEADER
+.o_thread_window_header {
+    background-color: $o-brand-pmsimply !important;
+}
+// END CHAT HEADER
+
+// START TOOLTIP
+.o_tooltip {
+    $o-tip-color: $o-brand-pmsimply;
+    $o-tip-border-width: 2px;
+    
+    border: $o-tip-border-width solid $o-tip-color;
+    background-color: $o-tip-color;
+
+    &.right::before {
+        border-right-color: $o-tip-color;
+    }
+    &.top::before {
+        border-top-color: $o-tip-color;
+    }
+    &.left::before {
+        border-left-color: $o-tip-color;
+    }
+    &.bottom::before {
+        border-bottom-color: $o-tip-color;
+    }
+
+    &::after {
+        border-color: $o-tip-color;
+        background: radial-gradient(lighten($o-tip-color, 7%), $o-tip-color);
+    }
+
+    &.active {
+       
+        &.right {
+            &::before {
+                border-right-color: $o-tip-color;
+            }
+        }
+        &.top {
+            &::before {
+                border-top-color: $o-tip-color;
+            }
+        }
+        &.left {
+            &::before {
+                border-left-color: $o-tip-color;
+            }
+        }
+        &.bottom {
+            &::before {
+                border-bottom-color: $o-tip-color;
+            }
+        }
+    }
+
+}
+// END TOOLTIP
+
