@@ -1,4 +1,6 @@
 $o-brand-pmsimply: #1B567A;
+$link-color: #1B567A;
+$link-hover-color: darken(#1B567A, 15%);
 $o-brand-pmsimply-navbar-inverse-link-hover-bg: darken(#1B567A, 10%) !default;
 $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%);
 
@@ -57,6 +59,13 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
         background-color: #CAE8FA !important;
     }
 }
+
+.o_field_widget {
+    // Many2one
+    &.o_field_many2one .o_external_button {
+        color: #1B567A;
+    }
+}
 // END FIELDS
 
 // START DOMAIN SELECTOR
@@ -103,6 +112,28 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
             }
         }
     }
+
+    // Separators
+    .o_horizontal_separator {
+        color: $o-brand-pmsimply;
+    }
+
+    // Button box
+    .oe_button_box {
+        .btn.oe_stat_button {
+            > .o_stat_info, > span { 
+                .o_stat_value {
+                    color: $o-brand-pmsimply;
+                }
+            }
+        }
+
+        .oe_stat_button {
+            .o_button_icon {
+                color: #1B567A;
+            }
+        }
+    }
 }
 // END LABELS
 
@@ -117,6 +148,10 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
         border-color: #1B567A !important;
     }
     
+}
+
+.btn-link {
+    @include o-hover-text-color($link-color, $link-hover-color);
 }
 
 .o_form_statusbar {
@@ -143,16 +178,6 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 
 }
 
-.oe_button_box {
-
-    .btn.oe_stat_button {
-        > .o_stat_info, > span { 
-            .o_stat_value {
-                color: $o-brand-pmsimply;
-            }
-        }
-    }
-}
 
 // END BUTTONS
 
@@ -242,3 +267,11 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 }
 // END TOOLTIP
 
+// START FORM NOTEBOOK
+.nav-link {
+    color: #1B567A;
+    &:hover, &:focus {
+        color: #1B567A;
+    }
+}
+// END FORM NOTEBOOK

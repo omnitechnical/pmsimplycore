@@ -26,6 +26,7 @@
                 'omni_subscription',
                 'project',
                 'hr',
+                'account',
                 'mail_bot',
                 'project_task_timer',
                 'bi_odoo_project_phases',
@@ -50,6 +51,9 @@
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
+    ],
+    'qweb': [
+        "static/src/xml/discuss.xml",
     ],
     'installable': True,
     'application': True,
