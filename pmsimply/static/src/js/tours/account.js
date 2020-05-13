@@ -65,7 +65,53 @@ tour.register('pmsimply_videoconference_tour', {
     content: _t('Let\'s create your first video conference.'),
     position: 'bottom',
     width: 300,
-},]);
+},{
+    trigger: 'input.o_field_char[name=name]',
+    extra_trigger: '.o_form_editable',
+    content: _t('Write your meeting subject.'),
+    position: 'bottom',
+    width: 300,
+},{
+    trigger: 'input.datetimepicker-input',    
+    extra_trigger: '.o_form_editable',
+    content: _t('Schedule your meeting. Add the meeting date.'),
+    position: 'right',
+    width: 300,
+},{
+    trigger: 'input.o_field_float',
+    extra_trigger: '.o_form_editable',
+    content: _t('Input the meeting duration.'),
+    position: 'right',
+    width: 300,
+},
+
+{
+    trigger: '.o_field_many2one[name="participants"]',
+    extra_trigger: '.o_form_editable',
+    content: _t('Add meeting participants.'),
+    position: 'right',
+    width: 300,
+},{
+    trigger: ".o_form_button_save",
+    extra_trigger: '.o_form_editable',
+    content: _t('Once your meeting is ready, you can save it.'),
+    position: "bottom"
+},{
+    trigger: "button.btn-primary[name=open]",
+    extra_trigger: '.o_form_readonly',
+    content: _t('Click here to join the meeting. Other users can join the meeting using the meeting link generated.'),
+    position: "bottom"
+},{
+    trigger: "button.btn-secondary[name=action_close_meeting]",
+    extra_trigger: '.o_form_readonly',
+    content: _t('Close the meeting once done!'),
+    position: "bottom"
+},
+
+
+
+
+]);
 
 
 });
