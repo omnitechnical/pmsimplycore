@@ -51,6 +51,23 @@ tour.register('pmsimply_account_tour', {
     position: "bottom"
 }, ]);
 
+
+//Video Conference
+tour.register('pmsimply_videoconference_tour', {
+    url: "/web",
+}, [tour.STEPS.SHOW_APPS_MENU_ITEM, {
+    trigger: '.o_app[data-menu-xmlid="sinerkia_jitsi_meet.menu_meeting"]',
+    content: _t('Collaborate and share! Open the Video Conference app to create and share meetings with other users and external partners. <b>It starts here.</b>'),
+    position: 'right',
+    edition: 'community',
+}, {
+    trigger: '.o_list_button_add',
+    content: _t('Let\'s create your first video conference.'),
+    position: 'bottom',
+    width: 300,
+},]);
+
+
 });
 
 // {
