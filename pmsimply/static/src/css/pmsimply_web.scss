@@ -1,6 +1,14 @@
 $o-brand-pmsimply: #1B567A;
+$link-color: #1B567A;
+$link-hover-color: darken(#1B567A, 15%);
 $o-brand-pmsimply-navbar-inverse-link-hover-bg: darken(#1B567A, 10%) !default;
 $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%);
+
+// START LABEL ROOT
+//a {
+//    color: $o-brand-pmsimply !important;
+//}
+// END LABEL ROOT
 
 // START NAVBAR
 .o_main_navbar {
@@ -51,6 +59,13 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
         background-color: #CAE8FA !important;
     }
 }
+
+.o_field_widget {
+    // Many2one
+    &.o_field_many2one .o_external_button {
+        color: #1B567A;
+    }
+}
 // END FIELDS
 
 // START DOMAIN SELECTOR
@@ -77,6 +92,13 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 // END DOMAIN SELECTOR
 
 // START LABELS
+.breadcrumb {
+    .breadcrumb-item {
+        > a {
+            color: $o-brand-pmsimply !important;
+        }
+    }
+}
 .o_form_view {
     .o_form_uri {
         color: #1B567A;
@@ -90,19 +112,46 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
             }
         }
     }
+
+    // Separators
+    .o_horizontal_separator {
+        color: $o-brand-pmsimply;
+    }
+
+    // Button box
+    .oe_button_box {
+        .btn.oe_stat_button {
+            > .o_stat_info, > span { 
+                .o_stat_value {
+                    color: $o-brand-pmsimply;
+                }
+            }
+        }
+
+        .oe_stat_button {
+            .o_button_icon {
+                color: #1B567A;
+            }
+        }
+    }
 }
 // END LABELS
 
 // START BUTTONS
 .btn-primary {
 
-    background-color: $o-brand-pmsimply;
-    border-color: #1B567A;
+    background-color: $o-brand-pmsimply !important;
+    border-color: #1B567A !important;
 
     &:hover {
-        background-color: darken(#1B567A, 15%);
-        border-color: #1B567A;
+        background-color: darken(#1B567A, 15%) !important;
+        border-color: #1B567A !important;
     }
+    
+}
+
+.btn-link {
+    @include o-hover-text-color($link-color, $link-hover-color);
 }
 
 .o_form_statusbar {
@@ -111,33 +160,28 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
            
             &:not(.disabled) {
                 &:hover, &:active, &:focus {
-                    color: $o-brand-pmsimply;
+                    color: $o-brand-pmsimply !important;
+                    background-color: gray('200') !important;
+
+                    &:after {
+                        border-left-color: gray('200') !important;
+                    }
                 }
             }
 
             &.btn-primary.disabled {
                 background-color: gray('200') !important;
-                color: $o-brand-pmsimply;
+                color: $o-brand-pmsimply !important;
             }
         }
     }
 
 }
 
-.oe_button_box {
-
-    .btn.oe_stat_button {
-        > .o_stat_info, > span { 
-            .o_stat_value {
-                color: $o-brand-pmsimply;
-            }
-        }
-    }
-}
 
 // END BUTTONS
 
-// START SEARCH VIEW
+// START SEARCH VIEW AND SEARCH PANEL
 .o_searchview {
     .o_searchview_facet {
         .o_searchview_facet_label {
@@ -148,7 +192,15 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
         background-color: $o-brand-pmsimply;
     }
 }
-// END SEARCH VIEW
+
+.o_controller_with_searchpanel {
+    .o_search_panel {
+        .o_search_panel_category .o_search_panel_section_icon {
+            color: $o-brand-pmsimply;
+        }
+    }
+}
+// END SEARCH VIEW AND SEARCH PANEL
 
 // START LOADING
 .o_loading {
@@ -215,3 +267,11 @@ $o-brand-pmsimply-navbar-extra-menu-items-dropdown-toggle: lighten(#1B567A, 15%)
 }
 // END TOOLTIP
 
+// START FORM NOTEBOOK
+.nav-link {
+    color: #1B567A;
+    &:hover, &:focus {
+        color: #1B567A;
+    }
+}
+// END FORM NOTEBOOK

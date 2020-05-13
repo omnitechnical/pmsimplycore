@@ -16,6 +16,14 @@ class ResUsers(models.Model):
 			('disabled', 'Disabled'),
 		], string="PMSimplyBot Status")  # keep track of the state: correspond to the code of the last message sent
 
+	notification_type = fields.Selection([
+		('email', 'Handle by Emails'),
+		('inbox', 'Handle in PMSimply')],
+		'Notification', required=True, default='email',
+		help="Policy on how to handle Chatter notifications:\n"
+			 "- Handle by Emails: notifications are sent to your email address\n"
+			 "- Handle in PMSimply: notifications appear in your PMSimply Inbox")
+
 	def _is_admin(self):
 		self.ensure_one()
 		res = super(ResUsers, self)._is_admin()

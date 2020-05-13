@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <function model="ir.model.data" name="enable_update" eval="('project', 'project_project_data')"/>
+
+        <function model="ir.model.data" name="enable_update" eval="('project', 'project_task_data_0')"/>
+
+        <record id="project.project_project_data" model="project.project">
+            <field name="name">Start here to discover PMSimply</field>
+        </record>
+
+        <record id="project.project_task_data_0" model="project.task">
+            <field name="name">Welcome to PMSimply</field>
+        </record>
+
+        <function model="ir.model.data" name="disable_update" eval="('project', 'project_project_data')"/>
+
+        <function model="ir.model.data" name="disable_update" eval="('project', 'project_task_data_0')"/>
+
+    </data>
+</odoo>

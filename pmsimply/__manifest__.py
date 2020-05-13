@@ -25,6 +25,8 @@
                 'app_odoo_customize',
                 'omni_subscription',
                 'project',
+                'hr',
+                'account',
                 'mail_bot',
                 'project_task_timer',
                 'bi_odoo_project_phases',
@@ -35,19 +37,23 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'security/res_groups.xml',
-        #'security/res_user.xml',
+        'security/ir.model.access.csv',
         'data/res_partner_data.xml',
         'data/auth_signup_data.xml',
         'data/digest_template_data.xml',
         'data/portal_data.xml',
+        'data/project_data.xml',
         'views/assets.xml',
         'views/project_views.xml',
+        'views/hr_employee_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
+    ],
+    'qweb': [
+        "static/src/xml/discuss.xml",
     ],
     'installable': True,
     'application': True,
